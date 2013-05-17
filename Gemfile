@@ -1,38 +1,104 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+ruby "2.0.0"
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# View Models for Rails
+gem "draper"
 
-gem 'sqlite3'
+# HTTP client that provides a common interface over many adapters
+gem "faraday", require: false
 
+# HTML Abstraction Markup Language
+gem "haml-rails"
 
-# Gems used only for assets and not required
-# in production environments by default.
+# Create JSON structures via Builder-style DSL.
+gem "jbuilder"
+
+# preview email templates in the browser
+gem "mail_view", "~> 1.0.3"
+
+# Ruby libmysql binding for ActiveRecord.
+gem "mysql2"
+
+# Ruby on Rails
+gem "rails"
+
+# Simple Rails configuration
+gem "rails_config"
+
+# Taint/permit/require parameters passed from controller to model.
+gem "strong_parameters"
+
+# Email validation
+gem "validates_email_format_of", require: false
+
+# URL validation
+gem "validate_url", require: false
+
 group :assets do
+
+  #Adapter for the Compass Stylesheet Authoring Framework
+  gem 'compass-rails'
+
+  # Make HAML available to asset pipeline
+  gem 'haml_assets'
+
+  # Sass adapter for the Rails asset pipeline.
   gem 'sass-rails',   '~> 3.2.3'
+
+  # CoffeeScript adapter for the Rails asset pipeline.
   gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  # Ruby wrapper for UglifyJS JavaScript compressor
   gem 'uglifier', '>= 1.0.3'
+
+  # SASS version of Twitter bootstrap.
+  gem 'bootstrap-sass', '~> 2.1.1.0'
+
+  # underscore.js for the Rails asset pipeline
+  gem 'underscore-rails'
+
+  # Javascript runtime
+  gem 'therubyracer'
+
 end
 
-gem 'jquery-rails'
+group :development do
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+  # Less asset pipeline spam in logs
+  gem "quiet_assets"
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development, :test do
 
-# Deploy with Capistrano
-# gem 'capistrano'
+  # RSpec: testing framework.
+  gem "rspec-rails"
 
-# To use debugger
-# gem 'debugger'
+end
+
+group :test do
+
+  # Factory girl - easily create new models
+  gem "factory_girl_rails"
+
+  # Declaritive JSON matching
+  gem "json_expressions"
+
+  # Freeze and or adjust time
+  gem "timecop"
+
+  # Record and playback http requests
+  gem "vcr", require: false
+
+  # Stub and set expectations on HTTP requests.
+  gem "webmock"
+
+end
+
+group :production do
+
+  # HTTP server with Rack interface.
+  gem "unicorn"
+
+end
