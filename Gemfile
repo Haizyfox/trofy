@@ -98,7 +98,7 @@ end
 
 group :production do
 
-  # # HTTP server with Rack interface.
-  # gem "unicorn"
+  # HTTP server with Rack interface.
+  gem "unicorn"
 
 end
