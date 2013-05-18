@@ -102,7 +102,6 @@ textarea {
   height: auto;
 }
 // Everything else
-textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -129,6 +128,18 @@ input[type="color"],
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
     @include box-shadow(#{inset 0px $baseLineHeight 0px 0px white, inset 0px 0px 0px 1px rgba(82,168,236,.8)});
+  }
+}
+
+textarea{
+  @include border-radius(0);
+  @include box-shadow(none);
+  border:1px solid $grayLight;
+
+  &:focus {
+    border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
   }
 }
 

@@ -1,0 +1,9 @@
+a.wys-icon, a.wys-icon:link{
+  opacity:0.5;
+  @include transition(opacity 0.5s linear);
+  text-decoration:none;
+}
+
+a.wys-icon:hover{
+  opacity:1;
+}

@@ -35,6 +35,7 @@ gem "validates_email_format_of", require: false
 # URL validation
 gem "validate_url", require: false
 
+
 group :assets do
 
   #Adapter for the Compass Stylesheet Authoring Framework
@@ -60,6 +61,9 @@ group :assets do
 
   # Javascript runtime
   gem 'therubyracer'
+
+  #Jquery
+  gem 'jquery-rails'
 
 end
 

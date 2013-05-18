@@ -1,11 +1,19 @@
 .container
-  %h1 Trofy <small>&trade;</small>
-  %p Trofy is a clean and simple way to show off your PlayStation 3&trade; trophies.
+  %h1 Payj<small>&trade;</small>
+  %p Payj<small>&trade;</small> is a clean and simple way to write down your ideas. Any time.
   .row-fluid
-    .span6.card
-      %h2 Get Started
-      %p Enter your <em>PlayStation Network&trade;</em> account name to begin:
-      %form.form-inline
-        %input.input-medium.text-center(type="text" placeholder="PSN Account")
-        %button.btn.btn-primary
-          Fetch Trophies
+    .span12.card
+      %form.form-vertical
+        #toolbar(style="display: none;")
+          %a.wys-icon(data-wysihtml5-command="bold" title="CTRL+B")
+            %img(src="/assets/icons/dark/Settings.png" width="28" height="28")
+          %a.wys-icon(data-wysihtml5-command="italic" title="CTRL+I")
+            %img(src="/assets/icons/dark/List.png" width="28" height="28")
+          %a.wys-icon(data-wysihtml5-action="change_view")
+            %img(src="/assets/icons/dark/Navigation.png" width="28" height="28")
+        %textarea#textarea(placeholder="Enter text ...")
+        .control-group
+          %button.btn.btn-primary
+            Save
+
+
