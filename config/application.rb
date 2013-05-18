@@ -58,5 +58,9 @@ module Trofy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Use double quote as attribute wrapper.
+    # This deals with nested single quotes in angular partials not precompiling correctly.
+    Haml::Template.options[:attr_wrapper] = '"'
   end
 end
