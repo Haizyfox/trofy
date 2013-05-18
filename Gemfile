@@ -17,8 +17,8 @@ gem "jbuilder"
 # preview email templates in the browser
 gem "mail_view", "~> 1.0.3"
 
-# Ruby libmysql binding for ActiveRecord.
-gem "mysql2"
+# Postgres
+gem "pg"
 
 # Ruby on Rails
 gem "rails"

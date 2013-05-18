@@ -91,7 +91,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multipart-post (1.2.0)
-    mysql2 (0.3.11)
+    pg (0.14.1)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
@@ -191,7 +191,7 @@ DEPENDENCIES
   jbuilder
   json_expressions
   mail_view (~> 1.0.3)
-  mysql2
+  pg
   quiet_assets
   rails
   rails_config
